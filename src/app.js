@@ -50,7 +50,6 @@ app.get("/subscribers/:id", (req, res) => {
   });
 
 
-// Your code goes here
 app.use((req, res) => {
     res.status(404).json({ message: "Error - Route not found" }); // Send a JSON response with a status of 404 (Not Found)
   });
