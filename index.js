@@ -8,7 +8,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
 
 app.use(cors({
-    origin: 'https://youtube-subscriber-7ic7dknuh-devil-jais-projects.vercel.app/'
+    origin: 'http://localhost:2001/'
   }));
 
 
