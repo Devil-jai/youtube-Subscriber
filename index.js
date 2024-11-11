@@ -8,8 +8,8 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
 
 app.use(cors({
-    origin: 'https://youtube-subscriber-kappa.vercel.app/',
-    methods: ['GET', 'POST', 'PUT', 'DELETE' ],
+    origin: 'http://localhost:2001/',
+    methods: ['GET'],
     credentials: true,
   }));
 
