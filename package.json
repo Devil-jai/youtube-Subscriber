@@ -4,11 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "install-server": "npm install",
-    "start-server": "cd src && node index.js",
-    "install-client": "cd frontend && npm install",
-    "build-client": "cd frontend && npm run build",
-    "start-client": "cd frontend && npm run start"
+    "index":"node index.js",
+    "build": "npm install --prefix && npm run build --prefix && npm install"
   },
   "author": "",
   "license": "ISC",

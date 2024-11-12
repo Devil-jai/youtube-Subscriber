@@ -5,7 +5,7 @@ const cors = require('cors');
 
 
 app.use(cors({
-    origin: 'https://youtube-subscriber-kappa.vercel.app/',
+    origin: 'http://localhost:2001',
     methods: ['GET'],
     credentials: true,
   }));
