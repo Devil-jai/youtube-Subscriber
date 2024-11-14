@@ -7,6 +7,7 @@ const DATABASE_URL = "mongodb+srv://deviljai1999:OGLMkuGA31Pp1FSM@cluster0.inasx
 mongoose.connect(DATABASE_URL, {
     tls: true,
     tlsAllowInvalidCertificates: true, // Allows invalid certificates, bypassing SSL validation
+    tlsInsecure: true, 
   });
 const db = mongoose.connection
 db.on('error', (err) => console.log(err))
