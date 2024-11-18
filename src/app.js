@@ -37,6 +37,7 @@ app.get('/subscribers/names', (req,res)=>{
 app.get("/subscribers/:id", (req, res) => {
     try {
       const id = req.params.id; 
+      console.log(id);
       SubscriberModel.findById(id)
       .then((subscriber)=>{
         res.status(200).json({subscriber})
