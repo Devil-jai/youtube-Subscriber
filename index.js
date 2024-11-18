@@ -2,7 +2,8 @@ const express = require('express')
 const app = require('./src/app');
 const mongoose = require('mongoose')
 const cors = require('cors');
-const port = process.env.port || 4001;
+const port = process.env.PORT || 4001;
+require('dotenv').config()
 
 app.use(cors({
     origin: 'https://youtube-subscriber-kappa.vercel.app/',
@@ -16,7 +17,7 @@ app.use(express.urlencoded({ extended: false }));
 
 
 
-const DATABASE_URL = "mongodb+srv://deviljai1999:OGLMkuGA31Pp1FSM@cluster0.inasx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const DATABASE_URL = process.env.MONGO_URI;
 mongoose.connect(DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection
 db.on('error', (err) => console.log(err))

@@ -1,10 +1,12 @@
 const mongoose = require('mongoose')
 const subscriberModel = require('./models/subscribers')
 const data = require('./data')
+require('dotenv').config()
 
 
-const DATABASE_URL = "mongodb+srv://deviljai1999:OGLMkuGA31Pp1FSM@cluster0.inasx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-mongoose.connect(DATABASE_URL,{ useNewUrlParser: true, useUnifiedTopology: true });
+
+
+mongoose.connect(process.env.MONGO_URI,{ useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection
 db.on('error', (err) => console.log(err))
 db.once('open', () => console.log('Database created...'))
