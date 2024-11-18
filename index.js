@@ -6,7 +6,7 @@ const port = process.env.PORT || 4001;
 require('dotenv').config()
 
 app.use(cors({
-    origin: 'https://youtube-subscriber-kappa.vercel.app/',
+    origin: 'https://youtube-subscriber-dcf4q3eey-devil-jais-projects.vercel.app/',
     methods: ['GET'],
     credentials: true,
   }));
