@@ -1,14 +1,14 @@
 const express = require('express')
 const app = require('./src/app');
 const mongoose = require('mongoose')
-// const cors = require('cors');
+const cors = require('cors');
 const port = process.env.port || 4001;
 
-// app.use(cors({
-//     origin: 'https://youtube-subscriber-kappa.vercel.app/',
-//     methods: ['GET'],
-//     credentials: true,
-//   }));
+app.use(cors({
+    origin: 'https://youtube-subscriber-kappa.vercel.app/',
+    methods: ['GET'],
+    credentials: true,
+  }));
 
 
 app.use(express.json())
